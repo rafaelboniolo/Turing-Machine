@@ -1,3 +1,3 @@
 # Turing-Machine
-this  é uma máquina de turing capaz de reconhecer sentencas com a regra anbncn!
-criado para fins academicos!
+this is a turing machine capable of recognizing sentencs with the a^n b^n c^n rule!
+criado para fins acadêmicos!
