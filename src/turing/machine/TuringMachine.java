@@ -103,8 +103,8 @@ public class TuringMachine {
                 
                 this.refresh(this.fita);
                 
-                while(state.getPrev() != null)
-                    state = state.getPrev();
+                
+                state = state.getNext();
                 
                 state3.setText("C");
                 try {

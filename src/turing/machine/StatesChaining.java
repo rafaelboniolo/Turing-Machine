@@ -19,11 +19,8 @@ public class StatesChaining {
         state = state.getNext();
         state.setNext(new State("c"));
         state = state.getNext();
+        state.setNext(initial);
         
-        
-        state.setPrev(initial.getNext());
-        state = state.getPrev();
-        state.setPrev(initial);
         
         return initial;
     }
