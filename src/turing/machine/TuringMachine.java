@@ -145,9 +145,10 @@ public class TuringMachine {
             System.out.print(x+" ");
         });
        
-       if(fita.contains("a") || fita.contains("b") || fita.contains("c"))
-           return false;
-       return true;
+        for (int b = 0; b < fita.size(); b++)
+            if(!fita.get(b).equals("X"))
+               return false;
+        return true;
         
     }
     
