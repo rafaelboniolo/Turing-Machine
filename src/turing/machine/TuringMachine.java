@@ -73,10 +73,14 @@ public class TuringMachine {
                 
                 state1.setText("state 1");
             }
-            
-            while(fita.get(i).equals("a") || fita.get(i).equals("X")){
+            try {
+                while(fita.get(i).equals("a") || fita.get(i).equals("X")){
                 i++;
+                }
+            } catch (IndexOutOfBoundsException ex ) {
+                return false;
             }
+            
             
             if(fita.get(i).equals(state.getC())){
                 
@@ -93,10 +97,14 @@ public class TuringMachine {
                 } catch (InterruptedException ex) {}
                 state2.setText("state 2");                
             }
-            
-            while(fita.get(i).equals("b") || fita.get(i).equals("X")){
+            try {
+                while(fita.get(i).equals("b") || fita.get(i).equals("X")){
                 i++;
+                }
+            } catch (IndexOutOfBoundsException e) {
+                return false;
             }
+            
             
             if(fita.get(i).equals(state.getC())){
                 fita.set(i, "X");
@@ -117,7 +125,7 @@ public class TuringMachine {
                 try{
                     while(fita.get(i).equals("X") || fita.get(i).equals("a") || fita.get(i).equals("b"))
                         i--;
-                }catch(ArrayIndexOutOfBoundsException ex){
+                }catch(IndexOutOfBoundsException ex){
                     System.out.println("Branco alcançado");
                     i = 0;
                 }
